@@ -1,0 +1,24 @@
+1. create 1 folder inside src and add 1 file with .js extension
+2. create 1 context
+
+        const UserContext = React.createContext()
+
+        export default UserContext;
+
+3. we have to create 1 provider.
+    (import that UserContext into new provide file)
+
+4. Add state and add childern.
+        your state values need to add inside UserContext.Provider
+
+        const UserContextProvider = ({children}) => {
+
+    cosnt [user, setUser] = React.useState (null)
+
+    return  (
+        <UserContext.Provider value={{user, setUser}}>
+            {children}
+        </UserContext.Provider>
+
+    )
+}
