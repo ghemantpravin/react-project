@@ -1,28 +1,23 @@
-
-import {useState} from 'react'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Create from './components/Create'
+import Home from './components/Home'
+import Read from './components/Read'
+import Update from './components/Update'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-
-    const [color, setColor] = useState('olive');
-
-    function GreenClick(){
-      setColor('green')
-    }
-
-    function PinkClick(){
-      setColor('pink');
-    }
-
   return (
-    <>
-        <div className="fixed w-full h-screen duration-200" 
-        style={{backgroundColor : color}}>
-          <button onClick={GreenClick}>Green</button><br></br>
-          <button onClick={PinkClick}>Pink</button><br></br>
-          {/* <button onClick={() => setColor('black')}>Black</button><br></br>
-          <button onClick={() => setColor('blue')}>Blue</button> */}
-        </div>
-    </>
+    <div className='container'>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/create' element={<Create></Create>}></Route>
+            <Route path='/update/:id' element={<Update></Update>}></Route>
+            <Route path='/read/:id' element={<Read></Read>}></Route>
+          </Routes>
+        </BrowserRouter>
+    </div>
   )
 }
 

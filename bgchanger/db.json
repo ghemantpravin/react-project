@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "johnny_updated",
+      "email": "johnny_updated@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "depp",
+      "email": "depp@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "jack",
+      "email": "jack@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "sparrow",
+      "email": "sparrow@gmail.com"
+    },
+    {
+      "name": "Amelia Rowland",
+      "email": "vahilo@mailinator.com",
+      "id": 6
+    },
+    {
+      "name": "Nichole Wiley",
+      "email": "karyxubevo@mailinator.com",
+      "id": 7
+    }
+  ]
+}
